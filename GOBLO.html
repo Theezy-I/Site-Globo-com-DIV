@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout de Notícias</title>
+<style>
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 960px;
+    width: 100%;
+  }
+
+  
+  .secao-destaque {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  .imagem-principal {
+    position: relative;
+    height: 400px;
+    
+    background-image: url('cheetoso.png'); 
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .imagem-principal::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+    z-index: 1;
+  }
+
+  .titulo-principal {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 800;
+    padding: 20px 25px;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .tarja-vermelha {
+    background-color: #b91c1c; 
+    display: flex;
+    padding: 18px 25px;
+    gap: 20px;
+  }
+
+  .item-tarja {
+    flex: 1;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .item-tarja::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    margin-top: 7px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  .linha-divisoria {
+    height: 1px;
+    background-color: #f0f0f0;
+    margin: 0 0 25px 0;
+  }
+
+  
+  .secao-secundaria {
+    display: flex;
+    gap: 25px;
+  }
+
+  .cartao-noticia {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cartao-imagem {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+
+  .cartao-titulo {
+    color: #b91c1c;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  }
+
+  .cartao-sublink {
+    color: #333333;
+    font-size: 15px;
+    line-height: 1.3;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  
+  .cartao-sublink::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #b91c1c;
+    border-radius: 50%;
+    margin-top: 7px;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="secao-destaque">
+      <div class="imagem-principal">
+        <h1 class="titulo-principal">Trump afirma que 'tudo foi destruído' no Irã e promete 3ª onda de ataques</h1>
+      </div>
+      
+      <div class="tarja-vermelha">
+        <div class="item-tarja">Israel ataca reunião que definiria o novo líder do Irã, diz jornal</div>
+        <div class="item-tarja">Agência: estrondos são ouvidos em Dubai, Abu Dhabi e Doha; SIGA</div>
+        <div class="item-tarja">General do Irã ameaça centros econômicos do Oriente Médio</div>
+      </div>
+    </div>
+
+    <div class="linha-divisoria"></div>
+
+    <div class="secao-secundaria">
+      
+      <div class="cartao-noticia">
+        <img src="cuiegritando.png" alt="Multidão em funeral" class="cartao-imagem">
+        <h2 class="cartao-titulo">Multidão no Irã vai a funeral de crianças; ONU pede apuração</h2>
+        <div class="cartao-sublink">Escalada nuclear pode ser fatal, diz especialista</div>
+      </div>
+
+      <div class="cartao-noticia">
+        <img src="cheetosEcarinha.png" alt="Trump e líder espanhol" class="cartao-imagem">
+        <h2 class="cartao-titulo">Trump ameaça usar bases da Espanha sem autorização</h2>
+        <div class="cartao-sublink">O que está por trás do conflito entre EUA e Irã?</div>
+      </div>
+
+      <div class="cartao-noticia">
+        <img src="aviaaaaoo.png" alt="Drone e Míssil" class="cartao-imagem">
+        <h2 class="cartao-titulo">Valores da guerra: drones de US$ 20 mil x mísseis de US$ 4 mi</h2>
+        <div class="cartao-sublink">Emirados criam corredor de segurança para voos</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
